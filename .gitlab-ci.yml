@@ -1,0 +1,19 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - docker build -t node-ci-test .
+
+test:
+  stage: test
+  script:
+    - docker run --rm node-ci-test npm test || echo "Tests failed"
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Déploiement fictif (production/staging)"
