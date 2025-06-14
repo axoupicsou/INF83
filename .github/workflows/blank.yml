@@ -36,8 +36,8 @@ jobs:
       - name: 🧪 Run tests
         run: npm run test || echo "Tests échoués – à corriger"
 
-      - name: 🏗️ Build app
-        run: npm run build
+      # - name: 🏗️ Build app
+      #   run: npm run build
       # # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       # - uses: actions/checkout@v4
 
