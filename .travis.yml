@@ -1,0 +1,12 @@
+language: node_js
+services:
+  - docker
+
+node_js:
+  - "18"
+
+install:
+  - docker build -t node-ci-test .
+
+script:
+  - docker run --rm node-ci-test npm test || true
